@@ -1,0 +1,29 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin: 31px 0 15px;
+}
+
+.pagination__page,
+.pagination__arrow {
+	width: 46px;
+	height: 46px;
+	border: 1px solid #d7e2f0;
+	background: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.pagination__page--active {
+	border-color: #2f80ed;
+	color: #2f80ed;
+	font-weight: 700;
+}
+
+.pagination__arrow:disabled,
+.pagination__page:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}

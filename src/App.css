@@ -1,0 +1,30 @@
+.page {
+	min-height: 100vh;
+	background: #ffffff;
+	color: #1f2a37;
+}
+
+.main {
+	padding-bottom: 24px;
+}
+
+.container {
+	width: min(1450px, calc(100% - 10px));
+	margin: 0 auto;
+}
+
+.state-message {
+	text-align: center;
+	padding: 40px 0;
+	font-size: 18px;
+}
+
+.state-message--error {
+	color: #d14343;
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: calc(100% - 32px);
+	}
+}

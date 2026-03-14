@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #fff;
+	color: #1f2a37;
+}
+
+img {
+	max-width: 100%;
+}
+
+button,
+input,
+select {
+	font: inherit;
+}
