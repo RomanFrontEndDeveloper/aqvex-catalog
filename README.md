@@ -1,73 +1,115 @@
-# React + TypeScript + Vite
+# AQVEX Test Task – Product Catalog
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a test assignment for AQVEX.
 
-Currently, two official plugins are available:
+The task was to implement a product catalog page based on the provided Figma design using **React + TypeScript + Vite**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Figma design:
+https://www.figma.com/design/CMy9bnx2VGTVsj7uSBFf9Y/aptitude-test
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- CSS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Fetching products from API
+- Product grid layout
+- Product card component
+- Pagination
+- Responsive layout
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## API
+
+Products are loaded from:
+
+https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products
+
+---
+
+## Images
+
+The Figma design contains a single product image used as a visual template.
+
+For this reason, a **local placeholder image** is used for all products.
+
+Location:
+
+public/images/product-placeholder.png
+
+---
+
+## Project structure
+
+src
+├─ api
+│ └─ products.ts
+│
+├─ assets
+│
+├─ components
+│ ├─ Footer
+│ ├─ Header
+│ ├─ Pagination
+│ ├─ ProductCard
+│ ├─ ProductGrid
+│ └─ Toolbar
+│
+├─ types
+│ └─ product.ts
+│
+├─ utils
+│ ├─ formatPrice.ts
+│ └─ pagination.ts
+│
+├─ App.css
+├─ App.tsx
+├─ index.css
+├─ main.tsx
+└─ vite-env.d.ts
+
+---
+
+## Pagination
+
+Pagination is implemented on the client side.
+
+Products per page:
+
+const PRODUCTS_PER_PAGE = 12
+
+---
+
+## Run locally
+
+Install dependencies
+
+npm install
+
+Run development server
+
+npm run dev
+
+Open
+
+http://localhost:5173
+
+---
+
+## Author
+
+Roman Okhremov  
+Junior Frontend Developer
