@@ -1,7 +1,6 @@
 import type { Product, ProductsApiResponse } from '../types/product';
 
-const PRODUCTS_URL =
-	'https://ip-194-99-21-145-139178.vps.hosted-by-mvps.net/api/v1/products';
+const PRODUCTS_URL = '/api/products';
 
 export async function fetchProducts(): Promise<Product[]> {
 	const response = await fetch(PRODUCTS_URL);
